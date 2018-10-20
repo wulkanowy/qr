@@ -1,2 +1,1 @@
-# qr
-UONET+ QR Code converter
+# UONET+ QR Code converter
