@@ -1,0 +1,38 @@
+version: 2
+jobs:
+  php:
+    working_directory: ~/qr
+    docker:
+    - image: circleci/php:7
+    steps:
+    - checkout:
+        path: ~/qr
+    - run: composer install
+    - run: ./vendor/bin/phpunit php/tests
+#  js:
+#    working_directory: ~/qr/js
+#    docker:
+#    - image: circleci/node:8
+#    steps:
+#    - checkout:
+#        path: ~/qr
+#    - run: npm install
+#    - run: ./node_modules/.bin/mocha
+  jvm:
+    working_directory: ~/qr/jvm
+    docker:
+    - image: circleci/openjdk:8
+    steps:
+    - checkout:
+        path: ~/qr
+    - run: ./gradlew check jacocoTestReport
+    - store_test_results:
+        path: ./build/test-results
+
+workflows:
+  version: 2
+  test:
+    jobs:
+    - php
+#    - js
+    - jvm
