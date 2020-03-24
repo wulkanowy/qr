@@ -9,15 +9,15 @@ jobs:
         path: ~/qr
     - run: composer install
     - run: ./vendor/bin/phpunit php/tests
-#  js:
-#    working_directory: ~/qr/js
-#    docker:
-#    - image: circleci/node:8
-#    steps:
-#    - checkout:
-#        path: ~/qr
-#    - run: npm install
-#    - run: ./node_modules/.bin/mocha
+  node:
+    working_directory: ~/qr/node
+    docker:
+    - image: circleci/node:8
+    steps:
+    - checkout:
+        path: ~/qr
+    - run: yarn
+    - run: yarn test
   jvm:
     working_directory: ~/qr/jvm
     docker:
@@ -34,5 +34,5 @@ workflows:
   test:
     jobs:
     - php
-#    - js
+    - node
     - jvm
