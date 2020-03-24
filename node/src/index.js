@@ -1,10 +1,11 @@
 const crypto = require('crypto');
+const util = require('util');
 
 const ALGORITHM = 'aes-128-ecb';
 const UTF8 = 'utf-8';
 const BASE64 = 'base64';
 
-const toArrayBuffer = (str) => new TextEncoder().encode(str);
+const toArrayBuffer = (str) => new util.TextEncoder().encode(str);
 
 const encode = (password, content) => {
   const cipher = crypto.createCipheriv(ALGORITHM, toArrayBuffer(password), Buffer.alloc(0));
