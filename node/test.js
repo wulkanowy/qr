@@ -1,4 +1,4 @@
-const vulcanQR = require('../index');
+const vulcanQR = require('./index');
 const assert = require('assert');
 
 const password = '0123456789ABCDEF';

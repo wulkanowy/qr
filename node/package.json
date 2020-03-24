@@ -1,12 +1,12 @@
 {
   "name": "@wulkanowy/qr-node",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "index.js",
   "repository": "git@github.com:wulkanowy/qr.git",
   "author": "selfisekai <laura@selfisekai.rocks>",
   "license": "MIT",
   "scripts": {
-    "test": "mocha ./src/test"
+    "test": "mocha ."
   },
   "dependencies": {},
   "devDependencies": {
