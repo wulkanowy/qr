@@ -1,5 +1,13 @@
 # UONET+ QR Code converter for Dart
 
+[![npm](https://img.shields.io/pub/v/uonet_qr.svg?style=flat-square)](https://pub.dev/packages/uonet_qr)
+
+## Instalation
+
+```yaml
+dependencies:
+  uonet_qr: ^1.0.0
+```
 
 ## Usage
 
