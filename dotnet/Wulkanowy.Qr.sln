@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WulkanowyQr", "WulkanowyQr\WulkanowyQr.csproj", "{6B70798A-1B52-4E6A-AA73-7CC5425474B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wulkanowy.Qr", "Wulkanowy.Qr\Wulkanowy.Qr.csproj", "{6B70798A-1B52-4E6A-AA73-7CC5425474B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WulkanowyQr.Test", "WulkanowyQr.Test\WulkanowyQr.Test.csproj", "{0725C0E7-0CD9-4484-8BA2-8D046418CC72}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wulkanowy.Qr.Test", "Wulkanowy.Qr.Test\Wulkanowy.Qr.Test.csproj", "{0725C0E7-0CD9-4484-8BA2-8D046418CC72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WulkanowyQr.Example", "WulkanowyQr.Example\WulkanowyQr.Example.csproj", "{93B26267-139C-4168-AAE4-4B849D96E5C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wulkanowy.Qr.Example", "Wulkanowy.Qr.Example\Wulkanowy.Qr.Example.csproj", "{93B26267-139C-4168-AAE4-4B849D96E5C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

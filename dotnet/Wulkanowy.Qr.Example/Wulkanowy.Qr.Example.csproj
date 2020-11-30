@@ -6,7 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\WulkanowyQr\WulkanowyQr.csproj" />
+      <ProjectReference Include="..\Wulkanowy.Qr\Wulkanowy.Qr.csproj" />
     </ItemGroup>
 
 </Project>

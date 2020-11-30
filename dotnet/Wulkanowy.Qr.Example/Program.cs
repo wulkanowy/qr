@@ -1,7 +1,4 @@
-﻿using System;
-using Wulkanowy;
-
-namespace Wulkanowy.Example
+﻿namespace Wulkanowy.Qr.Example
 {
     class Program
     {
