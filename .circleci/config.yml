@@ -37,6 +37,15 @@ jobs:
         path: ~/qr
     - run: pub get
     - run: pub run test
+  dotnet:
+    working_directory: ~/qr/dotnet
+    docker:
+      - image: mcr.microsoft.com/dotnet/core/sdk:3.1
+    steps:
+      - checkout:
+          path: ~/qr
+      - run: dotnet restore
+      - run: dotnet test
 
 workflows:
   version: 2
@@ -46,3 +55,4 @@ workflows:
     - node
     - jvm
     - dart
+    - dotnet

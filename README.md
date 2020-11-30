@@ -12,3 +12,4 @@
 - [Node.js](https://github.com/wulkanowy/qr/tree/master/node)
 - [PHP](https://github.com/wulkanowy/qr/tree/master/php)
 - [Dart](https://github.com/wulkanowy/qr/tree/master/dart)
+- [.NET](https://github.com/wulkanowy/qr/tree/master/dotnet)

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WulkanowyQr", "WulkanowyQr\WulkanowyQr.csproj", "{6B70798A-1B52-4E6A-AA73-7CC5425474B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WulkanowyQr.Test", "WulkanowyQr.Test\WulkanowyQr.Test.csproj", "{0725C0E7-0CD9-4484-8BA2-8D046418CC72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WulkanowyQr.Example", "WulkanowyQr.Example\WulkanowyQr.Example.csproj", "{93B26267-139C-4168-AAE4-4B849D96E5C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B70798A-1B52-4E6A-AA73-7CC5425474B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B70798A-1B52-4E6A-AA73-7CC5425474B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B70798A-1B52-4E6A-AA73-7CC5425474B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B70798A-1B52-4E6A-AA73-7CC5425474B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0725C0E7-0CD9-4484-8BA2-8D046418CC72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0725C0E7-0CD9-4484-8BA2-8D046418CC72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0725C0E7-0CD9-4484-8BA2-8D046418CC72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0725C0E7-0CD9-4484-8BA2-8D046418CC72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93B26267-139C-4168-AAE4-4B849D96E5C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93B26267-139C-4168-AAE4-4B849D96E5C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93B26267-139C-4168-AAE4-4B849D96E5C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93B26267-139C-4168-AAE4-4B849D96E5C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
