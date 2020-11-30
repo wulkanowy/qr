@@ -16,7 +16,7 @@ namespace WulkanowyQr
             aes.Mode = CipherMode.ECB;
             aes.Padding = PaddingMode.PKCS7;
 
-            var enc = aes.CreateEncryptor(aes.Key, aes.IV);
+            using var enc = aes.CreateEncryptor(aes.Key, aes.IV);
 
             using var memoryStream = new MemoryStream();
             using var csEncrypt = new CryptoStream(memoryStream, enc, CryptoStreamMode.Write);
@@ -37,7 +37,7 @@ namespace WulkanowyQr
             aes.Mode = CipherMode.ECB;
             aes.Padding = PaddingMode.PKCS7;
 
-            var dec = aes.CreateDecryptor(aes.Key, aes.IV);
+            using var dec = aes.CreateDecryptor(aes.Key, aes.IV);
 
             using var memoryStream = new MemoryStream(Convert.FromBase64String(content));
             using var cs = new CryptoStream(memoryStream, dec, CryptoStreamMode.Read);
