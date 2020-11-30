@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace WulkanowyQr.Test
+namespace Wulkanowy.Qr.Test
 {
     public class QrTest
     {

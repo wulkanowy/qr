@@ -1,4 +1,4 @@
-﻿namespace WulkanowyQr.Example
+﻿namespace Wulkanowy.Qr.Example
 {
     class Program
     {
