@@ -1,9 +1,8 @@
 //
-//  VulcanQR.swift
-//  SwiftVulcanSigner
+//  vulcan_qr.swift
 //
-//  Created by Krystian Postek on 05/05/2020.
-//  Copyright © 2020 Krystian Postek. All rights reserved.
+//
+//  Created by Tomasz on 13/02/2022.
 //
 
 import Foundation
