@@ -12,5 +12,5 @@ def decrypt_vulcan_qr_base64(content_encrypted: str, password: str) -> str:
 def decrypt_vulcan_qr_bytes(bcontent: bytearray, password: str) -> str:
     decipher = AES.new(password, AES.MODE_ECB)
     content_bytes: bytearray = decipher.decrypt(bcontent)
-    content_text = content_bytes.decode('utf-8')
+    content_text = content_bytes.decode()
     return content_text
