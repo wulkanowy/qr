@@ -33,8 +33,6 @@ jobs:
     build:
         macos:
             xcode: 13.1
-    docker:
-    - image: circleci/xcodebuild:13
     steps:
     - checkout:
         path: ~/qr
