@@ -28,6 +28,15 @@ jobs:
     - run: ./gradlew check jacocoTestReport
     - store_test_results:
         path: ./build/test-results
+  swift:
+    working_direcotry: ~/qr/swift
+    docker:
+    - image: circleci/xcodebuild:13
+    steps:
+    - checkout:
+      path: ~/qr
+    - run: xcodebuild -workspace vulcan-qr.xcworkspace -scheme vulcan-qr TEST_AFTER_BUILD=YES
+
 
 workflows:
   version: 2
@@ -36,3 +45,4 @@ workflows:
     - php
     - node
     - jvm
+    - swift
