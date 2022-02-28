@@ -34,7 +34,7 @@ jobs:
     - image: circleci/xcodebuild:13
     steps:
     - checkout:
-      path: ~/qr
+        path: ~/qr
     - run: xcodebuild -workspace vulcan-qr.xcworkspace -scheme vulcan-qr TEST_AFTER_BUILD=YES
 
 
