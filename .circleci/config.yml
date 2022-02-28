@@ -30,6 +30,9 @@ jobs:
         path: ./build/test-results
   swift:
     working_direcotry: ~/qr/swift
+    build:
+        macos:
+            xcode: 13.1
     docker:
     - image: circleci/xcodebuild:13
     steps:
