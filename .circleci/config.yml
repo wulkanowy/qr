@@ -12,7 +12,7 @@ jobs:
   node:
     working_directory: ~/qr/node
     docker:
-    - image: circleci/node:8
+    - image: circleci/node:16
     steps:
     - checkout:
         path: ~/qr
@@ -21,7 +21,7 @@ jobs:
   jvm:
     working_directory: ~/qr/jvm
     docker:
-    - image: circleci/openjdk:8
+    - image: circleci/openjdk:11
     steps:
     - checkout:
         path: ~/qr
