@@ -26,10 +26,10 @@ jobs:
         with:
           node-version: '16'
       - name: Install Node.js dependencies using Yarn
-        working_directory: ~/qr/node
+        working-directory: ~/qr/node
         run: yarn install
       - name: Run Node.js tests
-        working_directory: ~/qr/node
+        working-directory: ~/qr/node
         run: yarn test
   jvm:
     runs-on: ubuntu-latest
@@ -42,10 +42,10 @@ jobs:
           distribution: 'zulu'
           java-version: '11'
       - name: Run JVM tests
-        working_directory: ~/qr/jvm
+        working-directory: ~/qr/jvm
         run: ./gradlew check jacocoTestReport
       - name: Store the test results
-        working_directory: ~/qr/jvm
+        working-directory: ~/qr/jvm
         uses: actions/upload-artifact@v3
         with:
           name: test-results
@@ -60,10 +60,10 @@ jobs:
         with:
           sdk: '2.14.0'
       - name: Install Dart dependencies
-        working_directory: ~/qr/dart
+        working-directory: ~/qr/dart
         run: pub get
       - name: Run Dart tests
-        working_directory: ~/qr/dart
+        working-directory: ~/qr/dart
         run: pub run test
   dotnet: 
     runs-on: ubuntu-latest
@@ -75,5 +75,5 @@ jobs:
         with:
           dotnet-version: '3.1.407'
       - name: Run .NET tests
-        working_directory: ~/qr/dotnet
+        working-directory: ~/qr/dotnet
         run: dotnet test
