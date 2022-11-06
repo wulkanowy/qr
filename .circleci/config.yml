@@ -12,7 +12,7 @@ jobs:
   node:
     working_directory: ~/qr/node
     docker:
-    - image: circleci/node:8
+    - image: circleci/node:16
     steps:
     - checkout:
         path: ~/qr
@@ -21,7 +21,7 @@ jobs:
   jvm:
     working_directory: ~/qr/jvm
     docker:
-    - image: circleci/openjdk:8
+    - image: circleci/openjdk:11
     steps:
     - checkout:
         path: ~/qr
@@ -37,7 +37,24 @@ jobs:
     - checkout:
         path: ~/qr
     - run: xcodebuild -workspace vulcan-qr.xcworkspace -scheme vulcan-qr TEST_AFTER_BUILD=YES
-
+  dart:
+    working_directory: ~/qr/dart
+    docker:
+    - image: google/dart:2.10-dev
+    steps:
+    - checkout:
+        path: ~/qr
+    - run: pub get
+    - run: pub run test
+  dotnet:
+    working_directory: ~/qr/dotnet
+    docker:
+      - image: mcr.microsoft.com/dotnet/core/sdk:3.1
+    steps:
+      - checkout:
+          path: ~/qr
+      - run: dotnet restore
+      - run: dotnet test
 
 workflows:
   version: 2
@@ -47,3 +64,5 @@ workflows:
     - node
     - jvm
     - swift
+    - dart
+    - dotnet
