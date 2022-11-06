@@ -13,7 +13,7 @@ jobs:
       - name: Install PHP dependencies
         run: composer install
       - name: Run PHP tests
-        run: phpunit php/tests
+        run: ./vendor/bin/phpunit php/tests
   node:
     runs-on: ubuntu-latest
     steps:
