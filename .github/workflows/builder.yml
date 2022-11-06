@@ -57,7 +57,7 @@ jobs:
       - name: Setup Dart
         uses: dart-lang/setup-dart@v1.3
         with:
-          sdk: '2.14.0'
+          sdk: '2.10.0'
       - name: Install Dart dependencies
         working-directory: ./dart
         run: pub get
