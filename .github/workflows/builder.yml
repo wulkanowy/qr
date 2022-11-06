@@ -9,8 +9,8 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.2'
-          extensions: phpunit
+          php-version: '7.4'
+          extensions: phpunit:9
       #- name: Install PHP dependencies
         #run: composer install
       - name: Run PHP tests
