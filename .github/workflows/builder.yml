@@ -10,7 +10,7 @@ jobs:
         uses: shivammathur/setup-php@verbose
         with:
           php-version: '7.4'
-          extensions: phpunit:9
+          extensions: phpunit
       #- name: Install PHP dependencies
         #run: composer install
       - name: Run PHP tests
