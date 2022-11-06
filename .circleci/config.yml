@@ -31,9 +31,9 @@ jobs:
   swift:
     working_directory: ~/qr/swift
     build:
-        resource_class: large
         macos:
-            xcode: 13.1
+          xcode: 13.4.1
+        resource_class: large
     steps:
     - checkout:
         path: ~/qr
