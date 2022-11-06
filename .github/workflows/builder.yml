@@ -7,10 +7,10 @@ jobs:
       - name: Checkout the code 
         uses: actions/checkout@v3
       - name: Setup PHP
-        uses: shivammathur/setup-php@verbose
+        uses: shivammathur/setup-php@v2
         with:
           php-version: '7.4'
-          extensions: phpunit
+          tools: phpunit
       #- name: Install PHP dependencies
         #run: composer install
       - name: Run PHP tests
