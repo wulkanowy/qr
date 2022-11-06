@@ -11,8 +11,8 @@ jobs:
         with:
           php-version: '7.4'
           tools: phpunit
-      #- name: Install PHP dependencies
-        #run: composer install
+      - name: Install PHP dependencies
+        run: composer install
       - name: Run PHP tests
         working-directory: ./php
         run: phpunit ./tests
