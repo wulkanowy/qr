@@ -1,7 +1,6 @@
 name: Wulkanowy QR Builder
-on:
-  push:
-    branches: [ master ]
+on: push
+    #branches: [ master ]
 jobs:
   php:
     runs-on: ubuntu-latest
