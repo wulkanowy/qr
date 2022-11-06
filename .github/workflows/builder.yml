@@ -1,9 +1,8 @@
-name: Wulkanowy QR Builder
+name: Unit tests
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
+  push:
     branches: [ master ]
 
 jobs:
@@ -80,3 +79,27 @@ jobs:
       - name: Run .NET tests
         working-directory: ./dotnet
         run: dotnet test
+  swift:
+    runs-on: macos-latest 
+    steps:
+      - name: Checkout the code 
+        uses: actions/checkout@v3
+      - name: Run tests
+        working-directory: ./swift
+        run: xcodebuild -workspace vulcan-qr.xcworkspace -scheme vulcan-qr TEST_AFTER_BUILD=YES
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code 
+        uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+          cache: 'pip'
+      - name: Install dependencies
+        working-directory: ./python
+        run: pip install -r requirements.txt
+      - run: 
+      - name: Run python tests
+        working-directory: ./python
+        run: python wulkanowyqr.py
