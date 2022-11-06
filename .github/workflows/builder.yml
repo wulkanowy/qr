@@ -15,7 +15,7 @@ jobs:
         #run: composer install
       - name: Run PHP tests
         working-directory: ./php
-        run: phpunit /tests
+        run: phpunit ./tests
   node:
     runs-on: ubuntu-latest
     steps:
