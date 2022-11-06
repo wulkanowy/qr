@@ -7,7 +7,7 @@ jobs:
       - name: Checkout the code 
         uses: actions/checkout@v3
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@verbose
         with:
           php-version: '7.4'
           extensions: phpunit:9
