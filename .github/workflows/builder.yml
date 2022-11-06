@@ -45,7 +45,6 @@ jobs:
         working-directory: ~/qr/jvm
         run: ./gradlew check jacocoTestReport
       - name: Store the test results
-        working-directory: ~/qr/jvm
         uses: actions/upload-artifact@v3
         with:
           name: test-results
