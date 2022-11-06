@@ -1,0 +1,100 @@
+name: Wulkanowy QR
+on: push
+jobs:
+  php:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code 
+        uses: actions/checkout@v3
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+      - name: Install PHP dependencies
+        run: composer install
+      - name: Run PHP tests
+        run: ./vendor/bin/phpunit php/tests
+  node:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code 
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '19'
+      - name: Install Node.js dependencies using Yarn
+        working-directory: ./node
+        run: yarn install
+      - name: Run Node.js tests
+        working-directory: ./node
+        run: yarn test
+  jvm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code 
+        uses: actions/checkout@v3
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '11'
+      - name: Run JVM tests
+        working-directory: ./jvm
+        run: ./gradlew check jacocoTestReport
+      - name: Store the test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: ./build/test-results
+  dart:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code 
+        uses: actions/checkout@v3
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1.3
+        with:
+          sdk: '2.10.0'
+      - name: Install Dart dependencies
+        working-directory: ./dart
+        run: pub get
+      - name: Run Dart tests
+        working-directory: ./dart
+        run: pub run test
+  dotnet: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code 
+        uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '3.1.407'
+      - name: Run .NET tests
+        working-directory: ./dotnet
+        run: dotnet test
+  swift:
+    runs-on: macos-latest 
+    steps:
+      - name: Checkout the code 
+        uses: actions/checkout@v3
+      - name: Run tests
+        working-directory: ./swift
+        run: xcodebuild -workspace vulcan-qr.xcworkspace -scheme vulcan-qr TEST_AFTER_BUILD=YES
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code 
+        uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+          cache: 'pip'
+      - name: Install dependencies
+        working-directory: ./python
+        run: pip install -r requirements.txt
+      - run: 
+      - name: Run python tests
+        working-directory: ./python
+        run: python wulkanowyqr.py
