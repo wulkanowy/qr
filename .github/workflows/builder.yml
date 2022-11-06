@@ -10,12 +10,10 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '7.4'
-          tools: phpunit
       - name: Install PHP dependencies
         run: composer install
       - name: Run PHP tests
-        working-directory: ./php
-        run: ./vendor/bin/phpunit ./tests
+        run: phpunit php/tests
   node:
     runs-on: ubuntu-latest
     steps:
