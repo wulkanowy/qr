@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-pip install wulkanowy_qr
+pip install wulkanowy-qr
 ```
 
 ## Usage
