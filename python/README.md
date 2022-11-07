@@ -1,5 +1,7 @@
 # UONET+ QR Code converter for Python
 
+[![PyPI](https://img.shields.io/pypi/v/wulkanowy-qr.svg?style=flat-square)](https://pypi.org/project/wulkanowy-qr/)
+
 ## Installation
 
 ```
