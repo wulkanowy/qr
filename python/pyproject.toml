@@ -1,0 +1,13 @@
+[project]
+name = "wulkanowy-qr"
+version = "1.0.1"
+description = "UONET+ QR Code converter for Python"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "JelNiSlaw", email = "jelnislaw@gmail.com" }]
+urls = { Repository = "https://github.com/wulkanowy/qr/tree/master/python" }
+dependencies = ["pycryptodome~=3.15"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
