@@ -1,5 +1,5 @@
 [project]
-name = "wulkanowy_qr"
+name = "wulkanowy-qr"
 version = "1.0.0"
 description = "UONET+ QR Code converter for Python"
 readme = "README.md"
