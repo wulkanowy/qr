@@ -92,7 +92,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Run tests
         working-directory: ./swift
-        run: xcodebuild -workspace vulcan-qr.xcworkspace -scheme vulcan-qr TEST_AFTER_BUILD=YES
+        run: swift test
   python:
     runs-on: ubuntu-latest
     steps:
