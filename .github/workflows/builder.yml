@@ -88,6 +88,8 @@ jobs:
 
   python:
     runs-on: ubuntu-latest
+    env:
+      DEB_PYTHON_INSTALL_LAYOUT: deb_system
     steps:
       - name: Checkout the code
         uses: actions/checkout@v3
