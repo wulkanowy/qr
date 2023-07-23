@@ -85,7 +85,14 @@ jobs:
       - name: Run .NET tests
         working-directory: ./dotnet
         run: dotnet test
-
+  swift:
+    runs-on: macos-latest 
+    steps:
+      - name: Checkout the code 
+        uses: actions/checkout@v3
+      - name: Run tests
+        working-directory: ./swift
+        run: swift test
   python:
     runs-on: ubuntu-latest
     env:
